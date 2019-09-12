@@ -1,5 +1,5 @@
 from fabric.contrib.files import append, exists, sed
-from fabric.api import *
+from fabric.api import env, local, run
 import random 
 
 REPO_URL = 'https://github.com/AntoniPustolka/staging-.antoni-to-do-lists.git'
@@ -29,7 +29,7 @@ def _get_latest_source(source_folder):
     run(f'cd {source_folder} && git reset --hard {current_commit}')
 
 def _update_settings(source_folder, site_name):
-    settings_path = source_folder + '/superlists/settings.py'
+    settings_path = source_folder + '/superlists/settings.py'	
     sed(settings_path, "DEBUG = True", "DEBUG = False")
     sed(settings_path,
         'ALLOWED_HOSTS = .+$',
