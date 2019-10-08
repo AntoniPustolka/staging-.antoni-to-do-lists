@@ -14,7 +14,7 @@ class LayoutAndStylingTest(FunctionalTest):
        self.assertAlmostEqual(
            inputbox.location['x'] + inputbox.size['width'] / 2,
            512,
-           delta=60
+           delta=100
        )
        # She starts a new list and sees the imput is nicely
        # centered there too
@@ -25,7 +25,7 @@ class LayoutAndStylingTest(FunctionalTest):
        self.assertAlmostEqual(
            inputbox.location['x'] + inputbox.size['width'] / 2,
            612,
-           delta=60
+           delta=100
        )           
 
        # Satisfied, she goes back to sleep
