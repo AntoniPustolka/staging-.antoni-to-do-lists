@@ -52,7 +52,7 @@ class ListModelTest(TestCase):
            [item1, item2, item3]
        )
 
-   def test_list_ordering(self):
+   def test_string_representation(self):
        item = Item(text='some text')
        self.assertEqual(str(item), 'some text') 
      
